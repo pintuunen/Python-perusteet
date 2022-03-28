@@ -1,0 +1,10 @@
+def tulostus(sana):
+    print(sana)
+
+def main():
+    teksti = "Tulostusfunktio!"
+
+    tulostus(teksti)
+
+if __name__ == "__main__":
+    main()
