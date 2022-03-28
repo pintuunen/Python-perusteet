@@ -1,0 +1,8 @@
+nimi = input("Minkäniminen tiedosto luodaan?: ")
+teksti = input("Mitä kirjoitetaan tiedostoon?: ")
+
+tiedosto = open(nimi,"w",)
+tiedosto.write(teksti)
+tiedosto.close()
+
+print("Luotiin tiedosto", nimi,"ja siihen tallennettiin teksti:", teksti)
