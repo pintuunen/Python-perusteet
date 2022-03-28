@@ -1,0 +1,9 @@
+tiedosto = open("sanoja.txt", "r")
+muisti = tiedosto.readlines()
+
+muisti = [sana.strip() for sana in muisti]
+muisti.sort()
+
+print("Sanat laitettuna aakkosjärjestykseen:")
+for i in muisti:
+    print(i)
