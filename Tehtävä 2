@@ -1,0 +1,14 @@
+nimi = input('Anna tiedoston nimi:')
+try:
+    tiedosto = open(nimi, "r")
+    for rivi in tiedosto:
+        rivi = rivi.rstrip()
+        sisalto = int(rivi)
+        summa = sisalto + 313
+        print('Saatiin tulos',summa)
+    tiedosto.close()
+
+except OSError:
+    print("Virheellinen tiedostonnimi")
+except ValueError:
+    print("Tiedoston sisältö virheellinen!")
