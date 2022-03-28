@@ -1,0 +1,27 @@
+# -*- coding: cp1252 -*-
+
+def pituusmitta(sana):
+    mitta = len(sana)
+    mitta = int(mitta)
+    return mitta
+
+def main():
+    syote = True
+    while syote:
+        sana = input("Anna syöte (Lopeta lopettaa): ")
+        if sana == "Lopeta":
+                syote = False
+                break
+
+        else:
+            pituusmitta(sana)
+            pituus = pituusmitta(sana)
+
+        if pituus == 0:
+            print("Et antanut syötettä")
+        else:
+            print("Antamasi syöte oli", pituus,"merkkiä pitkä.")
+
+
+if __name__ == "__main__":
+    main()
