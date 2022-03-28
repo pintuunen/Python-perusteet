@@ -1,0 +1,5 @@
+muuttuja1 = int(10.6411)
+muuttuja2 = "Merkkijono"
+
+print("Kokonaislukumuunnos ei osaa pyöristää:", muuttuja1)
+print("Merkkijonon kertominen tuottaa toistoa:", muuttuja2*2)
