@@ -1,0 +1,24 @@
+class Kilpailija:
+
+    __pisteet = 0
+    __vari = ""
+
+    def lisaa_pisteet(self, lisays=1):
+        self.__pisteet = + lisays
+
+    def lisaa_vari(self, valinta):
+        self.__vari = valinta
+
+    def tulostus(self):
+        print("Kilpailijalla {0} on {1} pistettä!".format(self.__vari, self.__pisteet))
+
+
+def main():
+    eka = Kilpailija()
+    eka.lisaa_vari("sininen")
+    eka.lisaa_pisteet(10)
+    eka.tulostus()
+
+
+if __name__ == "__main__":
+    main()
