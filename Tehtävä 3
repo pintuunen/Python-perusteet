@@ -1,0 +1,6 @@
+print("Laskin")
+eka_luku = input("Anna ensimmäinen luku: ")
+toka_luku = input("Anna toinen luku: ")
+eka_luku = int(eka_luku)
+toka_luku =int(toka_luku)
+print("Tulos on:", eka_luku+toka_luku)
