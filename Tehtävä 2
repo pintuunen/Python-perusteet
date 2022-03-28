@@ -1,0 +1,10 @@
+merkkijono = True
+
+while merkkijono:
+    syote = input("Kirjoita jotain: ")
+
+    if syote == "lopeta":
+        merkkijono = False
+        print("Lopetit ohjelman.")
+    else:
+        print(syote)
