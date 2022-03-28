@@ -1,0 +1,6 @@
+kierrosm = int(input("Kuinka monta kierrosta?: "))
+
+tulos =int(0)
+for kierros in range (kierrosm):
+    tulos = tulos + kierros
+print("Kertymäksi saatiin: ", tulos)
