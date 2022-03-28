@@ -1,0 +1,10 @@
+def toinenpotenssi(luku: object) -> object:
+    potenssi = luku ** 2
+    print("Toinen potenssi on",potenssi)
+
+def main():
+    syote = int(input("Anna lukuarvo: "))
+    toinenpotenssi(syote)
+    
+if __name__ == "__main__":
+    main()
