@@ -1,0 +1,19 @@
+# -*- coding: cp1252 -*-
+
+def tulostus(sana = "Oletustulostus"):
+    print(sana)
+
+def main():
+    syote = True
+    while syote:
+        sana = input("Anna syöte (Lopeta lopettaa): ")
+        if sana == "Lopeta":
+                syote = False
+                break
+        if len(sana) <5:
+             tulostus()
+        else:
+            tulostus(sana)
+
+if __name__ == "__main__":
+    main()
