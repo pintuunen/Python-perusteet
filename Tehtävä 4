@@ -1,0 +1,48 @@
+# -*- coding: cp1252 -*-
+
+import time
+
+tiedostonimi = "muistio.txt"
+
+try:
+    tiedosto = open(tiedostonimi, "r")
+    tiedosto.close()
+except IOError:
+    print("Oletusmuistioa ei löydy, luodaan tiedosto.")
+
+while True:
+    print("Käytetään muistiota: {0}".format(tiedostonimi))
+    print("""(1) Lue muistikirjaa
+(2) Lisää merkintä
+(3) Tyhjennä muistikirja
+(4) Vaihda muistiota
+(5) Lopeta
+""")
+    valinta=int(input("Mitä haluat tehdä?: "))
+    if valinta == 1:
+        tiedosto = open(tiedostonimi,"r")
+        sisalto = tiedosto.read()
+        print(sisalto)
+        tiedosto.close()
+    elif valinta == 2:
+        tiedosto = open(tiedostonimi,"a")
+        lisays = input("Kirjoita uusi merkintä: ")
+        lisays = lisays + ':::'+ time.strftime("%X %x") + "\n"
+        tiedosto.write(lisays)
+        tiedosto.close()
+    elif valinta == 3:
+        tiedosto = open(tiedostonimi,"w")
+        print("Muistio tyhjennetty.")
+        tiedosto.close()
+    elif valinta == 4:
+        tiedostonimi = input("Anna tiedoston nimi: ")
+        try:
+            tiedosto = open(tiedostonimi, "r")
+            tiedosto.close()
+        except IOError:
+            print("Tiedostoa ei löydy, luodaan tiedosto.")
+    elif valinta == 5:
+        print("Lopetetaan.")
+        break
+    else:
+        print("Tuntematon valinta.")
