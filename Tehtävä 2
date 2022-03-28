@@ -1,0 +1,10 @@
+tiedosto = open("merkkijonoja.txt", "r")
+for salasana in tiedosto:
+	salasana = salasana[:-1]
+	tarkista= salasana.isalnum()
+	if tarkista:
+		print(salasana,"kelpaa salasanaksi.")
+	else:
+		print(salasana,"sisältää virheellisiä merkkejä.")
+
+tiedosto.close()
